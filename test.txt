@@ -1,0 +1,15 @@
+x := 0
+xw := 0
+xe := 0
+xd := 0
+xf := 0
+
+WHILE x <= 5 DO {
+
+IF x = 2 THEN {
+
+    y := 5
+
+}
+x := x +1
+}

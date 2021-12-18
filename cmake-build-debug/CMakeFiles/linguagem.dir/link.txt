@@ -1,0 +1,1 @@
+/usr/bin/cc -g CMakeFiles/linguagem.dir/main.c.o CMakeFiles/linguagem.dir/language.c.o CMakeFiles/linguagem.dir/runner.c.o -o linguagem 
