@@ -149,7 +149,12 @@ command:
   IF  bExpr THEN CE commandList CD ELSE CE commandList CD {
     $$ = buildIfElse($2,$5,$9);
   }
-  ;
+  |
+  SKIP {
+    $$ = buildSkip();
+  }
+
+
 commandList:
   {
     $$ =NULL;

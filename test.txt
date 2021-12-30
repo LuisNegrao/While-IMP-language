@@ -10,6 +10,8 @@ IF x = 2 THEN {
 
     y := 5
 
+} ELSE {
+   SKIP
 }
 x := x +1
 }

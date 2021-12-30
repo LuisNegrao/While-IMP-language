@@ -198,6 +198,8 @@ void runProgram(struct CommandList *commandList) {
                           commandList->command->type.if_else.if_list,
                           commandList->command->type.if_else.else_list);
 
+        } else if (commandList->command->kind == E_SKIP) {
+
         } else {
             printf("ILLEGAL COMMAND EXCEPTION\n");
             return;

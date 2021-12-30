@@ -31,7 +31,7 @@ struct Expression *buildOperation(int operator, struct Expression *left, struct 
     return expression;
 }
 
-struct BooleanOperation *buildBoolean(char* value) {
+struct BooleanOperation *buildBoolean(char *value) {
     struct BooleanOperation *operation = (struct BooleanOperation *) malloc(sizeof(struct BooleanOperation));
     operation->kind = E_BOOLEAN;
     operation->value = strcmp(value, "true") ? 1 : 0;
@@ -103,6 +103,12 @@ struct Command *buildWhile(struct BooleanOperation *operation, struct CommandLis
     command->kind = E_WHILE;
     command->type.e_while.booleanOperation = operation;
     command->type.e_while.commandList = list;
+    return command;
+}
+
+struct Command *buildSkip() {
+    struct Command *command = (struct Command*) malloc(sizeof(struct Command));
+    command->kind = E_SKIP;
     return command;
 }
 

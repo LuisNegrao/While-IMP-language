@@ -1,7 +1,10 @@
 file(REMOVE_RECURSE
   "CMakeFiles/linguagem.dir/language.c.o"
+  "CMakeFiles/linguagem.dir/language.c.o.d"
   "CMakeFiles/linguagem.dir/main.c.o"
+  "CMakeFiles/linguagem.dir/main.c.o.d"
   "CMakeFiles/linguagem.dir/runner.c.o"
+  "CMakeFiles/linguagem.dir/runner.c.o.d"
   "linguagem"
   "linguagem.pdb"
 )

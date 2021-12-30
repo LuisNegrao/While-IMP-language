@@ -1,17 +1,16 @@
+
+# Consider dependencies only in project.
+set(CMAKE_DEPENDS_IN_PROJECT_ONLY OFF)
+
 # The set of languages for which implicit dependencies are needed:
 set(CMAKE_DEPENDS_LANGUAGES
-  "C"
   )
-# The set of files for implicit dependencies of each language:
-set(CMAKE_DEPENDS_CHECK_C
-  "/home/luisnegrao/Trabalho/Faculdade/5Ano/linguagem/language.c" "/home/luisnegrao/Trabalho/Faculdade/5Ano/linguagem/cmake-build-debug/CMakeFiles/linguagem.dir/language.c.o"
-  "/home/luisnegrao/Trabalho/Faculdade/5Ano/linguagem/main.c" "/home/luisnegrao/Trabalho/Faculdade/5Ano/linguagem/cmake-build-debug/CMakeFiles/linguagem.dir/main.c.o"
-  "/home/luisnegrao/Trabalho/Faculdade/5Ano/linguagem/runner.c" "/home/luisnegrao/Trabalho/Faculdade/5Ano/linguagem/cmake-build-debug/CMakeFiles/linguagem.dir/runner.c.o"
-  )
-set(CMAKE_C_COMPILER_ID "GNU")
 
-# The include file search paths:
-set(CMAKE_C_TARGET_INCLUDE_PATH
+# The set of dependency files which are needed:
+set(CMAKE_DEPENDS_DEPENDENCY_FILES
+  "/home/luis/Faculdade/5ano/While-IMP-language/language.c" "CMakeFiles/linguagem.dir/language.c.o" "gcc" "CMakeFiles/linguagem.dir/language.c.o.d"
+  "/home/luis/Faculdade/5ano/While-IMP-language/main.c" "CMakeFiles/linguagem.dir/main.c.o" "gcc" "CMakeFiles/linguagem.dir/main.c.o.d"
+  "/home/luis/Faculdade/5ano/While-IMP-language/runner.c" "CMakeFiles/linguagem.dir/runner.c.o" "gcc" "CMakeFiles/linguagem.dir/runner.c.o.d"
   )
 
 # Targets to which this target links.

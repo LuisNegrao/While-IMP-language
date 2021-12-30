@@ -57,7 +57,8 @@ struct Command {
         BOOL_ATTRIB,
         E_IF,
         IF_ELSE,
-        E_WHILE
+        E_WHILE,
+        E_SKIP
     }kind;
     union {
         struct {
@@ -100,6 +101,7 @@ struct Command* buildBooleanAttrib(char* name, struct BooleanOperation* operatio
 struct Command* buildIf(struct BooleanOperation *operation, struct CommandList *list);
 struct Command* buildIfElse(struct BooleanOperation *operation, struct CommandList *ifList, struct CommandList *elseList);
 struct Command* buildWhile(struct BooleanOperation *operation, struct CommandList *list);
+struct Command* buildSkip();
 struct CommandList* buildCommandList(struct Command *first, struct CommandList *second);
 void buildProgram(struct CommandList* list);
 
