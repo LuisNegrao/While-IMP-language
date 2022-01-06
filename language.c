@@ -98,6 +98,15 @@ buildIfElse(struct BooleanOperation *operation, struct CommandList *ifList, stru
     return command;
 }
 
+struct BooleanOperation* buildNegOperation(struct BooleanOperation* operation) {
+
+    struct BooleanOperation* operation1 = (struct BooleanOperation*) malloc(sizeof(struct BooleanOperation));
+    operation1->kind = E_NEG;
+    operation1->negOp.operation = operation;
+    return operation1;
+
+}
+
 struct Command *buildWhile(struct BooleanOperation *operation, struct CommandList *list) {
     struct Command *command = (struct Command *) malloc(sizeof(struct Command));
     command->kind = E_WHILE;

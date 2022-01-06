@@ -33,7 +33,8 @@ struct BooleanOperation {
         E_BOOLVAR,
         E_BOOLEAN,  //ATTRIB
         E_BOOLEANEXPRESSION,
-        E_AND_OR
+        E_AND_OR,
+        E_NEG
     }kind;
     char* name;
     int value;
@@ -49,6 +50,10 @@ struct BooleanOperation {
         struct BooleanOperation *right;
     } and_or_op;
 
+    struct negOperatiob {
+        struct BooleanOperation* operation;
+    }negOp;
+
 };
 
 struct Command {
@@ -58,7 +63,7 @@ struct Command {
         E_IF,
         IF_ELSE,
         E_WHILE,
-        E_SKIP
+        E_SKIP,
     }kind;
     union {
         struct {
@@ -96,6 +101,7 @@ struct BooleanOperation* buildBooleanVariable(char* name);
 struct BooleanOperation* buildBoolean(char* value);
 struct BooleanOperation* buildBooleanOperation(int operator, struct Expression *left, struct Expression *right);
 struct BooleanOperation* buildAndOrOperation(int operator, struct BooleanOperation *left, struct BooleanOperation *right);
+struct BooleanOperation* buildNegOperation(struct BooleanOperation* operation);
 struct Command* buildAttrib(char *name, struct Expression *expression);
 struct Command* buildBooleanAttrib(char* name, struct BooleanOperation* operation);
 struct Command* buildIf(struct BooleanOperation *operation, struct CommandList *list);

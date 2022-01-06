@@ -43,6 +43,7 @@ int yyline = 1;
 "{" {return CE;}
 "}" {return CD;}
 "SKIP" {return SKIP;}
+"!" {return NEG;}
 [a-z][a-zA-Z0-9]* {
     yylval.Var = strdup(yytext);
     return VAR;

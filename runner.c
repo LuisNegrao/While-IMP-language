@@ -122,15 +122,17 @@ int solveBooleanOperation(struct BooleanOperation *booleanOperation) {
         }
     } else if (booleanOperation->kind == E_AND_OR) {
         switch (booleanOperation->and_or_op.operator) {
-            case 269:
+            case 270:
                 return solveBooleanOperation(booleanOperation->and_or_op.left) &&
                        solveBooleanOperation(booleanOperation->and_or_op.right);
-            case 270:
+            case 271:
                 return solveBooleanOperation(booleanOperation->and_or_op.left) ||
                        solveBooleanOperation(booleanOperation->and_or_op.right);
             default:
                 printf("ARDEU\n");
         }
+    } else if (booleanOperation->kind == E_NEG) {
+        return solveBooleanOperation(booleanOperation->negOp.operation) == 0 ? 1 : 0;
     }
 
 }
